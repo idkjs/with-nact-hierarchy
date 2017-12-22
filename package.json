@@ -16,6 +16,6 @@
   },
   "dependencies": {
     "reason-nact": "^1.0.1",
-    "reason-nact-postgres": "^1.0.0"
+    "reason-nact-postgres": "^1.0.4"
   }
 }

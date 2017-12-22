@@ -133,6 +133,8 @@ let createContactsService = (parent, userId) =>
   spawnPersistent(
     ~key="contacts" ++ userId,
     ~name=userId,
+    ~shutdownAfter=15 * minutes,
+    ~snapshotEvery=10 * messages,
     parent,
     /* state (always first in stateful), sender/message is ref to types this actor expects, _ calls the () in RML  */
     (state, (sender, msg), {persist}) =>
